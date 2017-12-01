@@ -11,6 +11,7 @@ import com.koushikdutta.ion.Ion;
 import com.pincumbe.pincumbetimandroidcodingchallenge.models.BookModel;
 import com.pincumbe.pincumbetimandroidcodingchallenge.util.BooksRecyclerAdapter;
 
+import java.util.Collections;
 import java.util.List;
 
 public class BooksListActivity extends AppCompatActivity {
@@ -33,6 +34,7 @@ public class BooksListActivity extends AppCompatActivity {
                             //TODO handle error
                         }else {
                             BooksRecyclerAdapter booksRecyclerAdapter = new BooksRecyclerAdapter(getApplicationContext(), result);
+                            Collections.sort(result);
                             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
                             recyclerView.setLayoutManager(layoutManager);
                             recyclerView.setAdapter(booksRecyclerAdapter);

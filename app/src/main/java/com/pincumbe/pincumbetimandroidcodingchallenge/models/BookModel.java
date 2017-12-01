@@ -1,10 +1,12 @@
 package com.pincumbe.pincumbetimandroidcodingchallenge.models;
 
+import android.support.annotation.NonNull;
+
 /**
  * Data model representation of a book
  */
 
-public class BookModel {
+public class BookModel implements Comparable<BookModel> {
     private String title;
     private String author;
     private String imageURL;
@@ -54,5 +56,10 @@ public class BookModel {
     @Override
     public String toString() {
         return author + ": " + title + ": " + imageURL + "\n";
+    }
+
+    @Override
+    public int compareTo(@NonNull BookModel o) {
+        return title.compareTo(o.getTitle());
     }
 }
