@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Pincumbe.Tim.AndroidCodingChallenge</string>
+    <string name="title_books">Ebay Books</string>
+    <string name="book_thumbnail_content_desc">book thumbnail</string>
+</resources>
